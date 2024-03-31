@@ -1,0 +1,12 @@
+$fonts: ( 'Roboto': ( ('Medium', 500), ('Regular', 400)), 'Comfortaa': ( ('Regular', 400), ('Bold', 700)), 'Montserrat': ( ('Regular', 400), ('Bold', 700)));
+@each $font,
+$weights in $fonts {
+    @each $name,
+    $weight in $weights {
+        @font-face {
+            font-family: $font;
+            src: url('../fonts/#{$font}-#{$name}.ttf');
+            font-weight: $weight;
+        }
+    }
+}
